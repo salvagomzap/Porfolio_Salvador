@@ -1,0 +1,69 @@
+/* Hace que al pulsar en los enlaces del menú, la pantalla se deslice suavemente */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Evita que la barra de navegación (que es fija) tape los títulos de cada sección */
+section {
+    scroll-margin-top: 75px;
+}
+
+header#inicio {
+    background: linear-gradient(135px, #1e293b 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación sutil para el icono del código de fondo */
+header#inicio .fa-code-branch {
+    transition: transform 0.5s ease;
+}
+
+header#inicio:hover .fa-code-branch {
+    transform: rotate(15deg) scale(1.05);
+}
+
+/* Define la transición suave para los efectos flotantes */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cuando el usuario pasa el ratón por encima de un proyecto:
+   La tarjeta se eleva un poco y proyecta una sombra más profunda */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Asegura que los contenedores de iconos superiores de las tarjetas mantengan uniformidad */
+.card .bg-secondary, 
+.card .bg-primary, 
+.card .bg-success {
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de intensidad del color de fondo del icono al hacer hover en la tarjeta */
+.card:hover .bg-secondary { background-color: #4b5563 !important; }
+.card:hover .bg-primary { background-color: #0b5ed7 !important; }
+.card:hover .bg-success { background-color: #157347 !important; }
+
+/* Efecto visual de iluminación para los bloques de tus tecnologías */
+#habilidades .bg-opacity-25 {
+    transition: all 0.3s ease;
+}
+
+#habilidades .col-6:hover .bg-opacity-25 {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(1.05);
+}
+
+footer a {
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: #0d6efd !important; /* Cambia al azul de Bootstrap al pasar el cursor */
+    transform: scale(1.1);
+}
